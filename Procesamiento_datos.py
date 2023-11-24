@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 #Data frame
 data = pd.read_csv("catalogoGP.csv", index_col=0)
@@ -31,3 +33,16 @@ print(data.sample(5))
 
 #Cargar datos en un archivo
 data.to_csv("procesado.csv")
+
+#Observar valores atipicos
+sns.boxplot(x=data['Año']) #del 2007 hacia atras son valores fuera de rango
+plt.show()
+
+sns.boxplot(x=data['Duracion']) # duracion mayor a 42.5 es fuera de rango, especialmente arriba de 100
+plt.show()
+
+sns.boxplot(x=data['Cal. de critica']) #los que estan debajo de 56 estan fuera del rango
+plt.show()
+
+sns.boxplot(x=data['Cal. de usuarios']) #los que estan por debajo de 3.3 estan fuera de rango
+plt.show()
