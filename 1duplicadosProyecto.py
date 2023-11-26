@@ -35,7 +35,7 @@ while True:
         print("La cadena debe ser 'mean', 'bfill' o 'ffill'")
 
 def sustval(data, columnas, cadena):
-    prom = data[columnas].mean()
+    prom = data[columnas].mean().round(2)
     if cadena == "mean":
         data.fillna(prom,inplace=True)
     elif cadena == "bfill":
