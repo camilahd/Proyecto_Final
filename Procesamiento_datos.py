@@ -30,7 +30,7 @@ data["Cal. de usuarios"] = pd.to_numeric(data["Cal. de usuarios"])
 #Comprobacion
 print(data.dtypes)
 print(data.sample(5))
-print(data.sample(5))
+
 #Cargar datos en un archivo
 data.to_csv("procesado.csv")
 
