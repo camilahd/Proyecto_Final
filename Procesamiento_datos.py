@@ -19,7 +19,7 @@ def limpieza(data):
     data.replace('tbd', np.nan, inplace=True)
     data.replace('?', np.nan, inplace=True)
     data.replace('TBA', np.nan, inplace=True)
-    print(data.isnull())
+    #print(data.isnull())
     #print(data["Cal. de critica"].isnull().sum())
 
     #Asignar los tipos de datos
@@ -28,14 +28,15 @@ def limpieza(data):
     data["Cal. de critica"] = pd.to_numeric(data["Cal. de critica"])
     data["Cal. de usuarios"] = pd.to_numeric(data["Cal. de usuarios"])
 
-#Comprobacion
-print(data.dtypes)
-print(data.sample(5))
+    #Comprobacion
+    #print(data.dtypes)
+    #print(data.sample(5))
 
-#Cargar datos en un archivo
-data.to_csv("procesado.csv")
+    #Cargar datos en un archivo
+    data.to_csv("procesado.csv")
 
 #Observar valores atipicos
+"""
 sns.boxplot(x=data['Año']) #del 2007 hacia atras son valores fuera de rango
 plt.show()
 
@@ -47,3 +48,4 @@ plt.show()
 
 sns.boxplot(x=data['Cal. de usuarios']) #los que estan por debajo de 3.3 estan fuera de rango
 plt.show()
+"""
