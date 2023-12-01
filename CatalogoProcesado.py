@@ -1,6 +1,6 @@
 import pandas as pd
-df = pd.read_csv("CatalogoP.csv", index_col=0)
-data = pd.DataFrame(df)
+#df = pd.read_csv("CatalogoP.csv", index_col=0)
+#data = pd.DataFrame(df)
 
 def redondear(data):
     data['Duracion'] = data['Duracion'].round(2)

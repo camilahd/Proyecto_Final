@@ -4,11 +4,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Data frame
-data = pd.read_csv("catalogoGP.csv", index_col=0)
+#data = pd.read_csv("catalogoGP.csv", index_col=0)
 
 #Observar que tipo de datos tiene nuestro data frame y ejemplos
-print(data.dtypes)
-print(data.sample(5))
+#print(data.dtypes)
+#print(data.sample(5))
 
 def limpieza(data):
     #Modificar la columna Duracion, quitarle la h

@@ -5,8 +5,8 @@ import pandas as pd
 import numpy as np
 
 #IMPORTAMOS EL ARCHIVO DEL PROYECTO
-df = pd.read_csv("procesado.csv", index_col=0)
-data = pd.DataFrame(df)
+#df = pd.read_csv("procesado.csv", index_col=0)
+#data = pd.DataFrame(df)
 #print(data.sample(5))
 
 """data = pd.DataFrame({'brand': ['Yum Yum', 'Yum Yum', 'Indomie', 'Indomie', 'Indomie'],

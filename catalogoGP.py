@@ -40,4 +40,4 @@ def archivo():
         data["Cal. de usuarios"].append(publico.text)
 
     data_df = pd.DataFrame(data)
-    data_df.to_csv("catalogoGP.csv", index_col=0)
+    data_df.to_csv("catalogoGP.csv")
