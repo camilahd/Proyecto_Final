@@ -12,3 +12,5 @@ data = depuracion(data) #escoja el metodo bfill o ffill para rellenar los datos 
 
 data.to_csv("Catalogo_Terminado.csv")
 print("Terminé")
+
+#print(data.dtypes)

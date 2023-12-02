@@ -6,5 +6,5 @@ def redondear(data):
     data['Duracion'] = data['Duracion'].round(2)
     data['Cal. de critica'] = data['Cal. de critica'].round(2)
     data['Cal. de usuarios'] = data['Cal. de usuarios'].round(2)
-    data.to_csv("CatalogoProcesado.csv")
+    #data.to_csv("CatalogoProcesado.csv")
     return data

@@ -24,7 +24,8 @@ def limpieza(data):
     #print(data["Cal. de critica"].isnull().sum())
 
     #Asignar los tipos de datos
-    data["Año"] = pd.to_datetime(data["Año"], format='%Y')
+    #data["Año"] = pd.to_datetime(data["Año"], errors='coerce', format='%Y').dt.year
+    data["Año"] = data["Año"].fillna(0).astype('int64')
     data["Duracion"] = pd.to_numeric(data["Duracion"])
     data["Cal. de critica"] = pd.to_numeric(data["Cal. de critica"])
     data["Cal. de usuarios"] = pd.to_numeric(data["Cal. de usuarios"])
