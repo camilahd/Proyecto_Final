@@ -8,6 +8,7 @@ data = archivo()
 data = pd.DataFrame(data)
 data = limpieza(data)
 data = redondear(data)
-data = depuracion(data)
+data = depuracion(data) #escoja el metodo bfill o ffill para rellenar los datos faltantes
 
 data.to_csv("Catalogo_Terminado.csv")
+print("Terminé")

@@ -50,4 +50,6 @@ def depuracion(data):
 
 
     # Cargar datos en un archivo
-    data.to_csv("CatalogoP.csv")
+    #data.to_csv("CatalogoP.csv")
+    return data
+
