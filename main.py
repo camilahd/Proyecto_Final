@@ -1,4 +1,6 @@
-import pandas as pd
+#PROFESOR ESTAS SON LAS LIBERIAS QUE DEBE DE TENER PARA QUE SE EJECUTE CORRECTAMEBTE
+import pandas as pd #version 2.1.4
+import numpy #version 1.26.2
 from catalogoGP import archivo
 from Procesamiento_datos import limpieza
 from CatalogoProcesado import redondear
