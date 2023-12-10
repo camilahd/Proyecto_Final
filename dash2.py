@@ -1,9 +1,12 @@
 import pandas as pd
 import plotly.express as px
 from dash import Dash, dcc, html, dash_table, Input, Output,callback
+import CONSTANTES as cs
 from sqlalchemy import create_engine
 
-engine = create_engine('mysql+mysqlconnector://root:Diosahestia1@localhost:3306/CatalogoTiendaVirtual')
+cadena_conexion = f"mysql+mysqlconnector://{cs.USER}:{cs.PASSWORD}@{cs.SERVER}/{cs.NAME_BD}"
+#print(cadena_conexion)
+engine = create_engine(cadena_conexion)
 
 query = "SELECT * FROM juegos;"
 df = pd.read_sql(query, engine)

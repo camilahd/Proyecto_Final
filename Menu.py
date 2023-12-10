@@ -6,7 +6,7 @@ from dash import Input, Output, dcc, html
 
 app = dash.Dash(external_stylesheets=[dbc.themes.CERULEAN], suppress_callback_exceptions=True)
 
-# the style arguments for the sidebar. We use position:fixed and a fixed width
+#El estilo del sidebar
 SIDEBAR_STYLE = {
     "position": "fixed",
     "top": 0,
@@ -17,8 +17,7 @@ SIDEBAR_STYLE = {
     "background-color": "#f8f9fa",
 }
 
-# the styles for the main content position it to the right of the sidebar and
-# add some padding.
+#El estilo para el menu
 CONTENT_STYLE = {
     "margin-left": "18rem",
     "margin-right": "2rem",
@@ -34,10 +33,10 @@ sidebar = html.Div(
         ),
         dbc.Nav(
             [
-                dbc.NavLink("Home", href="/", active="exact"),
-                dbc.NavLink("Dashboard 1", href="/dash1", active="exact"),
-                dbc.NavLink("Dashboard 2", href="/dash2", active="exact"),
-                dbc.NavLink("GitHub", href="https://www.github.com",
+                dbc.NavLink("Inicio", href="/", active="exact"),
+                dbc.NavLink("Juegos más vendidos 2020", href="/dash1", active="exact"),
+                dbc.NavLink("Categoría mejor puntuada", href="/dash2", active="exact"),
+                dbc.NavLink("GitHub", href="https://github.com/camilahd/Proyecto_Final",
                             target="_blank", active="exact")
             ],
             vertical=True,
@@ -55,12 +54,16 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
-        return html.P("A continuacion se muestran las graficas de barras y tabla con la informacion recabada: ")
+        return html.P("Hola! Bienvenido a nuestra pagina!."
+                      "Esta es una página donde podrás ver los resultados acerca de nuestra investigación sobre "
+                      "la venta de videojuegos, y que tanto ha cambiado después de pandemia, así como las categorias"
+                      "más vendidas según la crítica y los usuarios."
+                      " A continuacion podrás navegar en nuestra página, encontrandote con nuestras diversas gráficas y toda la informacion recabada: ")
     elif pathname == "/dash1":
         return d1.create_layout()
     elif pathname == "/dash2":
         return d2.create_layout_2()
-    # If the user tries to reach a different page, return a 404 message
+    # Si el usuario intenta una p[agina diferente, se retornara el mensaje de error 404
     return html.Div(
         [
             html.H1("404: Not found", className="text-danger"),

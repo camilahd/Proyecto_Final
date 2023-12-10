@@ -2,8 +2,11 @@ import pandas as pd
 import plotly.express as px
 from dash import Dash, dcc, html
 from sqlalchemy import create_engine
+import CONSTANTES as cs
 
-engine = create_engine('mysql+mysqlconnector://root:Diosahestia1@localhost:3306/CatalogoTiendaVirtual')
+cadena_conexion = f"mysql+mysqlconnector://{cs.USER}:{cs.PASSWORD}@{cs.SERVER}/{cs.NAME_BD}"
+#print(cadena_conexion)
+engine = create_engine(cadena_conexion)
 
 query = "SELECT * FROM juegos;"
 df = pd.read_sql(query, engine)
@@ -31,13 +34,13 @@ def create_layout():
         #Juegos más vendidos del 2020 en adelante según la calificación de usuarios
         html.Div([
             html.H2("Juegos más vendidos del 2020 en adelante según la calificación de usuarios"),
-            dcc.Graph(figure=fig1, id='graph1', style={'width': '80%', 'height': '400px'})
+            dcc.Graph(figure=fig1, id='graph1', style={'width': '95%', 'height': '400px'})
         ]),
 
         #Mejores videojuegos lanzados antes del 2020 según la calificación de usuarios y crítica
         html.Div([
             html.H2("Mejores videojuegos lanzados antes del 2020 según la calificación de usuarios y crítica"),
-            dcc.Graph(figure=fig2, id='graph2', style={'width': '80%', 'height': '400px'})
+            dcc.Graph(figure=fig2, id='graph2', style={'width': '99%', 'height': '400px'})
         ]),
 
 
