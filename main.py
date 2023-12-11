@@ -4,6 +4,13 @@ import numpy as np #version 1.26.2
 import seaborn as sns #version 0.13.0
 import matplotlib.pyplot as plt #version 3.8.2
 
+#PARA CORRER EL MENU ESTAS SON LAS LIBREBRIAS
+import dash
+import dash_bootstrap_components as dbc
+import dash1 as d1
+import dash2 as d2
+from dash import Input, Output, dcc, html
+
 
 from catalogoGP import archivo
 from Procesamiento_datos import limpieza
