@@ -36,11 +36,3 @@ resultados = pd.read_sql(query, conexion)
 print(resultados)
 print("La primera parte del proyecto ha TERMINADO")
 
-#PARA CORRER EL MENU ESTAS SON LAS LIBREBRIAS
-import dash
-import dash_bootstrap_components as dbc
-import dash1 as d1
-import dash2 as d2
-from dash import Input, Output, dcc, html
-
-#LIBRERIAS DEL DASHBOARD 1
