@@ -1,4 +1,4 @@
-#PROFESOR ESTAS SON LAS LIBERIAS QUE DEBE DE TENER PARA QUE SE EJECUTE CORRECTAMEBTE
+#PROFESOR ESTAS SON LAS LIBERIAS QUE DEBE DE TENER PARA QUE SE EJECUTE CORRECTAMENTE
 import pandas as pd #version 2.1.4
 import numpy as np #version 1.26.2
 import seaborn as sns #version 0.13.0
@@ -35,3 +35,12 @@ query = "Select * from juegos where Año= 2017 "
 resultados = pd.read_sql(query, conexion)
 print(resultados)
 print("La primera parte del proyecto ha TERMINADO")
+
+#PARA CORRER EL MENU ESTAS SON LAS LIBREBRIAS
+import dash
+import dash_bootstrap_components as dbc
+import dash1 as d1
+import dash2 as d2
+from dash import Input, Output, dcc, html
+
+#LIBRERIAS DEL DASHBOARD 1
