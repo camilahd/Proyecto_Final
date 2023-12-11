@@ -4,6 +4,15 @@ import numpy as np #version 1.26.2
 import seaborn as sns #version 0.13.0
 import matplotlib.pyplot as plt #version 3.8.2
 
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup
+import requests
+
 #PARA CORRER EL MENU ESTAS SON LAS LIBREBRIAS
 import dash
 import dash_bootstrap_components as dbc
